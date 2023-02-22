@@ -1,0 +1,1295 @@
+{
+	"info": {
+		"_postman_id": "916066b7-423f-4a5b-a822-7fbfd45ff0ba",
+		"name": "Consultings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Random",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "User",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "omran@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123123",
+									"type": "default"
+								},
+								{
+									"key": "is_expert",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "omran@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzgyODlkY2U5MDg5ZDk1N2YzNDZkOWQ2NjFiYzU2ZGNiMGI3ODJmMGZjYWUwYzg4YWVmODkzNmM1Zjg0YTgyMjJmNjFlMzNjNDM3MjgzYmYiLCJpYXQiOjE2NzY3MzAyNjUuMTU3NDI1LCJuYmYiOjE2NzY3MzAyNjUuMTU3NDMsImV4cCI6MTcwODI2NjI2NS4xNTUwNTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.TcLNeS6YI_DQlC87jFxVZv5DumfCgk21GcExZpUprizl_gdOhy-y0RpQbh0rBaFg_wT9ST82bUsRAtXdeAV1xKfTxy8YvG5ZXAOXC1o0y3v86CNstS52hBmEy-eQew9OdfNDJTxKiOc4ni2QDq4a1aTU7St5OwThPKXmKvV7KOlQlYzDkMSYXrNfMMjBn3EEf0FIaaunHTsSeSm8k-6wJAHbpZyWQsbPYYzHJfe-EJq1uMHva4CGCqebo06SdkvHkBTVRHpIyBM7ODCdqgbT9v2YExalb1i8VsPMmU0r6Vozx6LF77juZeaBAAQiFfHiBg4Um24mlpkxDQUYh56Wh9glejDO19nife_-HZihNNMwMEoJJOOBJzcKAh4fAGqFCXMqYXsVhkPmVIybMU5hp7W8EAcgNG3ybsWiCkktdaTJU3n4OlagFkKmwlfABd8anvUuYZg-6hDTo6L-Ba5i97bBc32oaiQe0PsYaWRmeLMPCRP8g_qWlVWJgHQ69fsHd1I86e4yZ1TK72vpkGBasqFMH2HuDRrPAkwEiaRlLbLnwxmRP6yvI4cq_ClyP2HxN4TF0iaL-kMXp1LORp_3l2eL_7mDvWxvQRN50h-NyVKBUoS7OxVgla06aA6u2sYs7wtRo7xMfyAbeaVF6si0ueuZzcei9xi16UY06qAuW0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGY5NTBiMDcwYjYzZTFkYThlZmZlNWQ2MTM5NTg0Y2E2ZWY2NjhhM2M0Y2FkNzQzNzJmYjVjOGMxNDU3ZjRiZTAyMGZiYWIyNWZiOTQyNDQiLCJpYXQiOjE2NzY3MzA0NzkuNDQwMzI1LCJuYmYiOjE2NzY3MzA0NzkuNDQwMzMyLCJleHAiOjE3MDgyNjY0NzkuNDM2NDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JJSSC2UisKrFX0lQ9NGumke_DAu1br0s3aLYsJId4uit2gF4fRh4OGIqiJ9HMachiRRWjAyLgHQM36Hk8rpTTlU5MFXPiK4992mSy62c6yR1V4Vk-tTBdszjDEf_nQe6E0ObkUuFfC5hUi-8iunRWhL1hqzzxH1XM-VMV4TaZue2jUM2UKWYInn6sDp8d_zsnwJYv5Wu_oGifCkv3R3p2ukPNbKagyixx9az1CNh_9EXyh-aVVRePrxKGY3N1phxy4qnhR7Rvz54sUwV-ldjniKWytct2nFQFJxaIUxLTCG0SV5sOZrCf954rODPzB0VK5krohlx8nNEnxuU8E_qtZliUeSG0RolQ99W1uRKoUma_wcInZ6OWcwiH2nmRYgPPsasQ5rpgFbdsNPNKvIjz5EFZciYUiH2PLF9FWDvVfVMpfyaZppCJ5Cva_VfRRjvTiCQhUM2YNoJAGCrwF-_8MP4q8cwGk_dzjq9ERzCLSyoO39RZ14mTESVAqzg2IoGi5dA1lg4U6-F453VKy0oS2amF5kXu07ltD8dC7qviTq4Bevl8JTnyc08Gj3ixZXD4b7gdewuEshQGyhqb_1t50w_ZnP8QdxP7h5PhpLeFGxMU3OOPt5ouKfIG6KLn-hcQtbH9aK_cggwELzW-OKXN8HJw7cM3vobYTd4VLstoWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user_profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGY5NTBiMDcwYjYzZTFkYThlZmZlNWQ2MTM5NTg0Y2E2ZWY2NjhhM2M0Y2FkNzQzNzJmYjVjOGMxNDU3ZjRiZTAyMGZiYWIyNWZiOTQyNDQiLCJpYXQiOjE2NzY3MzA0NzkuNDQwMzI1LCJuYmYiOjE2NzY3MzA0NzkuNDQwMzMyLCJleHAiOjE3MDgyNjY0NzkuNDM2NDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JJSSC2UisKrFX0lQ9NGumke_DAu1br0s3aLYsJId4uit2gF4fRh4OGIqiJ9HMachiRRWjAyLgHQM36Hk8rpTTlU5MFXPiK4992mSy62c6yR1V4Vk-tTBdszjDEf_nQe6E0ObkUuFfC5hUi-8iunRWhL1hqzzxH1XM-VMV4TaZue2jUM2UKWYInn6sDp8d_zsnwJYv5Wu_oGifCkv3R3p2ukPNbKagyixx9az1CNh_9EXyh-aVVRePrxKGY3N1phxy4qnhR7Rvz54sUwV-ldjniKWytct2nFQFJxaIUxLTCG0SV5sOZrCf954rODPzB0VK5krohlx8nNEnxuU8E_qtZliUeSG0RolQ99W1uRKoUma_wcInZ6OWcwiH2nmRYgPPsasQ5rpgFbdsNPNKvIjz5EFZciYUiH2PLF9FWDvVfVMpfyaZppCJ5Cva_VfRRjvTiCQhUM2YNoJAGCrwF-_8MP4q8cwGk_dzjq9ERzCLSyoO39RZ14mTESVAqzg2IoGi5dA1lg4U6-F453VKy0oS2amF5kXu07ltD8dC7qviTq4Bevl8JTnyc08Gj3ixZXD4b7gdewuEshQGyhqb_1t50w_ZnP8QdxP7h5PhpLeFGxMU3OOPt5ouKfIG6KLn-hcQtbH9aK_cggwELzW-OKXN8HJw7cM3vobYTd4VLstoWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Random2",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "User2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12341234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12341234",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/update_user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGY5NTBiMDcwYjYzZTFkYThlZmZlNWQ2MTM5NTg0Y2E2ZWY2NjhhM2M0Y2FkNzQzNzJmYjVjOGMxNDU3ZjRiZTAyMGZiYWIyNWZiOTQyNDQiLCJpYXQiOjE2NzY3MzA0NzkuNDQwMzI1LCJuYmYiOjE2NzY3MzA0NzkuNDQwMzMyLCJleHAiOjE3MDgyNjY0NzkuNDM2NDMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JJSSC2UisKrFX0lQ9NGumke_DAu1br0s3aLYsJId4uit2gF4fRh4OGIqiJ9HMachiRRWjAyLgHQM36Hk8rpTTlU5MFXPiK4992mSy62c6yR1V4Vk-tTBdszjDEf_nQe6E0ObkUuFfC5hUi-8iunRWhL1hqzzxH1XM-VMV4TaZue2jUM2UKWYInn6sDp8d_zsnwJYv5Wu_oGifCkv3R3p2ukPNbKagyixx9az1CNh_9EXyh-aVVRePrxKGY3N1phxy4qnhR7Rvz54sUwV-ldjniKWytct2nFQFJxaIUxLTCG0SV5sOZrCf954rODPzB0VK5krohlx8nNEnxuU8E_qtZliUeSG0RolQ99W1uRKoUma_wcInZ6OWcwiH2nmRYgPPsasQ5rpgFbdsNPNKvIjz5EFZciYUiH2PLF9FWDvVfVMpfyaZppCJ5Cva_VfRRjvTiCQhUM2YNoJAGCrwF-_8MP4q8cwGk_dzjq9ERzCLSyoO39RZ14mTESVAqzg2IoGi5dA1lg4U6-F453VKy0oS2amF5kXu07ltD8dC7qviTq4Bevl8JTnyc08Gj3ixZXD4b7gdewuEshQGyhqb_1t50w_ZnP8QdxP7h5PhpLeFGxMU3OOPt5ouKfIG6KLn-hcQtbH9aK_cggwELzW-OKXN8HJw7cM3vobYTd4VLstoWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/delete_user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delete_user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTBjNTUxYWI2MzVlZDhlMGI1OTUyNzk5N2ZiMWEzMTljZmE5YmM3ZWIyZDg1ODlhM2E0MzY3YTBkNzRkNzkyNDAwNTBkNTY2ZmQ5MmQ2NGQiLCJpYXQiOjE2NzIxMjIyNDMuNTMyMTE0LCJuYmYiOjE2NzIxMjIyNDMuNTMyMTE5LCJleHAiOjE3MDM2NTgyNDMuNTI4MTM5LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.TVXm7Y6PLJaQ-Rq-cjc29OB3V6nFC0chf_DhDWrLyMfbn1Uwr8jYWmWqVONnNhtQYWyfoIaeaeJ-lXU7Z73NF_EdwGmwNewxy5t2NMHDwF_NPLNlHNFFB5pguRnkPuoA4mo3IMsf6U6mYV9yFrSev48oEf6wtlEi98Mp_AMmb0DE1fQbc7FmD2RJ9g3erm6w-op41SFLQXyk_dmi12qIlpmTMHMuVz821hCNHhEookbfSW8hGlkmCWM9NVX1s3OEtJoWlLxwMp3AMR9uaqt8FOnaNdyUh5qARCjrvkuMOrKnaYUvPIlONXuPNdZedgjhX4XGvjIKXLK7IZAeLdoPweIQTgdcxAca93S3omVd_wnVm8eIiPiwJVJ8ZGyqNl_rR_i9Vs2BgzWnclIUjlmZrPSaUrqc35O9OnqF4my-25ZR2PqHwBa77GiIlowpi2aQDj2dBpmB6hsPgpUgIk3mymRknGLgolpY6HtYVxlJw4nlTbd82NF9bp_VTuXm80JuaC52KFoSS98Iysn8jKXZjuUuBmIqt6OK6SdE9aCAOqy2yMP4HrWDzWQEZ9QHemV8PitdJvEOAAfOoXy7O6SENi1s-7kiNn2zQFSfGBl_Gw34cN1LmIITIM5gX-BzlWifEY0CkxKvQoUgzpPJbCauoF_dEF7mB6fhlCAofAhn1ZY",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Expert",
+			"item": [
+				{
+					"name": "Add Expert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number[]",
+									"value": "4324128",
+									"type": "text"
+								},
+								{
+									"key": "phone_number[]",
+									"value": "1234351212",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone_number[]",
+									"value": "1231231212",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "experience_name[0]",
+									"value": "Working with Databases",
+									"type": "text"
+								},
+								{
+									"key": "experience_description[0]",
+									"value": "Some description",
+									"type": "text"
+								},
+								{
+									"key": "experience_name[1]",
+									"value": "Experience",
+									"type": "text"
+								},
+								{
+									"key": "experience_description[1]",
+									"value": "Description",
+									"type": "text"
+								},
+								{
+									"key": "consulting_name[]",
+									"value": "Consulting131",
+									"type": "text"
+								},
+								{
+									"key": "consulting_name[]",
+									"value": "Consulting_name",
+									"type": "text"
+								},
+								{
+									"key": "cost",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Syria",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Damascus",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "Street",
+									"type": "text"
+								},
+								{
+									"key": "start_time[1][0]",
+									"value": "12:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[1][0]",
+									"value": "13:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[1][1]",
+									"value": "14:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[1][1]",
+									"value": "19:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[2][0]",
+									"value": "01:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[2][0]",
+									"value": "02:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[3][0]",
+									"value": "01:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[3][0]",
+									"value": "05:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[3][1]",
+									"value": "21:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[3][1]",
+									"value": "23:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[4][0]",
+									"value": "10:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[4][0]",
+									"value": "12:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[5][0]",
+									"value": "10:30",
+									"type": "text"
+								},
+								{
+									"key": "end_time[5][0]",
+									"value": "12:30",
+									"type": "text"
+								},
+								{
+									"key": "start_time[5][1]",
+									"value": "17:30",
+									"type": "text"
+								},
+								{
+									"key": "end_time[5][1]",
+									"value": "19:30",
+									"type": "text"
+								},
+								{
+									"key": "start_time[6][0]",
+									"value": "02:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[6][0]",
+									"value": "05:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[7][0]",
+									"value": "07:00",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_time[7][0]",
+									"value": "10:00",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start_time[6][1]",
+									"value": "12:00",
+									"type": "text"
+								},
+								{
+									"key": "end_time[6][1]",
+									"value": "20:00",
+									"type": "text"
+								},
+								{
+									"key": "start_time[7][1]",
+									"value": "11:00",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_time[7][1]",
+									"value": "12:00",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/cybit/Downloads/db.PNG"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/expert",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Expert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDNjMzM5ODU2ODliOWRjZTcwMmU4ZmQ4OTU4NzllZDkzYWYyOTNiZWU0N2NmYTc4MzZlYjdlYmYxOTlmMDkxOWRkYWQ5NTEzZGMwNDgxNTYiLCJpYXQiOjE2NzY3MzMwOTQuNDQyMzMyLCJuYmYiOjE2NzY3MzMwOTQuNDQyMzM5LCJleHAiOjE3MDgyNjkwOTQuNDM2NjMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LgdC3iHyjfbTu0ynPfr2bq_xnm56acJCfk1ZfLs4kaEk4-QNLHisHogm7MREQKK0ZfWO7f_qdAgrSgxjz8oyoD-yycez-DB8bbn1Fbs_1XyVTNJd3fHpbuAZelGXY9QcDhdXkVUEYYLHTLWr-Cydylv1sFnV1FxsTHeO4C63LfV1ePSu_aho5vB7RneBIJjtLNY9RlDjA11reR21kabHvv7NfknAFhtGNbuPig3-D35xUZbID6-4vGorKCBIQiwQCf5isulPflua8fi6VHaW6nzSLbZn9DSYTO4H4uvIAQhAk3xcGMHaVOYwM1AY9aL6o05IVwwliBQxZn4dNwi7YVxWFatQGTThSTm7VfI3jY8voRsewcfmfKgz6GvHYmyOMVbFKrpF1xReQLZBYJviqEOLrD-F6wdHBoXv81Uo7cs86DMnrEO7CjyLGiMTu6kOLC6AVC51Pclj5TKLsn8GeWwAn93eXjsW-KGO6Eaamp5UlLvq4n_Tk_Xv6a2iJjzCBQbkAD0W68Fuwc4glCfaenAkwGyE_m9Avbzb_kAZG2Ayyzh1uYzS-OoCVYRH15bRl4QSIV3GPp3iJnq5QZirR-BLsjdQZgQE1OtHRrJvqYV9EBj-OXN0CfHqnzPi60GuNQRnFbkDK065dVYYPqdnDC8wNE90SBEv483FKm1DSXk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "country",
+									"value": "Country",
+									"type": "default"
+								},
+								{
+									"key": "city",
+									"value": "City",
+									"type": "default"
+								},
+								{
+									"key": "street",
+									"value": "Street",
+									"type": "default"
+								},
+								{
+									"key": "cost",
+									"value": "4000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/update_expert",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"update_expert"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2M0NWNhYjE1NjFlNWFjNmRiODZlOTI3N2ZlZGYwMjVjNjNlMjEyODNlMDE1NDA5OWUyMTk4MmU0OWQ3ZGZjMGIwMmE5ODNkYzNkZDczYmUiLCJpYXQiOjE2NzIxMjE5ODQuNTQwODUxLCJuYmYiOjE2NzIxMjE5ODQuNTQwODU3LCJleHAiOjE3MDM2NTc5ODQuNTM3MDQ5LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.sfc-bZ7JI9cjODEeFxjuV-rG2dZJWVP_IF--B4FqdghMg7fazE8NExvL-bglyEvKyCAbeneoh26BNH8_1KZoPtDxTOr2klgXWLQ0LQ26Q66CMq_0UquxsromDEoxOyYVekJyi_DkchlGpsF4GSuUq9XKGG6jZEDc61YYMZVgkfoOQsPVhHxCEVOpnSEVKNaLYsGUC609qk9R-fsa3SUUD1zNUhBRde90uDZP0wwd6I4I2Cf6HDvOmdDEfViU00I30XGHONu1BYOLKLa3SdimgEAD-zNK0ueIu0NehegBIEpqv8q6lWXD3ILKBXJLszyuXyozEowJTNhN3Qj212T_70PXNHXVR17HyhRjLXA92nCDZXgnnLy4ih5SPV3gABgpEHQc81NEEdSxtHvPSJwP582HxPcbWjNVm17frJip9MznlZH9p1U5E_zWb06y7rBIZt1x0vfvYY3m92Hizzynw5-D2e1NacRWnZw__Hf86PrpFDC41JkW6m4-UXq10rb0B9prqdUyeAz-IW7mS6MhYVerInCtQQ3eIDOTriRMHpru78ELNfS8ULJVnMSkCF_IUM2rL12Wskh2b2GX7hfPftJZSO31VZ7NMXmR4pEnXbXKJGxxucO9n0EeMjKIOUQmRFhsdad8vjmDiUqyKqhmoLNZgFA3P_lY0lQR48fExXU",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Book an appointment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "day",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "start_time",
+									"value": "13:00",
+									"type": "default"
+								},
+								{
+									"key": "number_of_hours",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/book_appointment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book_appointment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User's booked  appointments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user_booked_appointments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_booked_appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorite Experts",
+			"item": [
+				{
+					"name": "Add to favorites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/favorite/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favorite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Favorite Experts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/favorites",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove from favorites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/favorite/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favorite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Consultings",
+			"item": [
+				{
+					"name": "Get all consultings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/consultings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"consultings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Create chat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "expert_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/chats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all chats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/chats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Create Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "chat_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "Hi",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/messages",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all messages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/messages?chat_id=1&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"messages"
+							],
+							"query": [
+								{
+									"key": "chat_id",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Phone Number",
+			"item": [
+				{
+					"name": "Create Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number[]",
+									"value": "12312334312",
+									"type": "default"
+								},
+								{
+									"key": "phone_number[]",
+									"value": "12312342",
+									"type": "default"
+								},
+								{
+									"key": "phone_number[]",
+									"value": "123123344224",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/phone_numbers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phone_numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "44525",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/phone_number/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phone_number",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Phone Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/phone_number/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"phone_number",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Expert's booked Appointments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjMwZTA5Nzc1NGRlNjc3Y2RlOWE0ZGU2ZjA0Yzk1NDlkZmZkYzg0MTMwNDZmYWJjZTU0ZTk2YzY3ODIwZjZkNTg5ODZiZTAzMzcyNTI5OTQiLCJpYXQiOjE2NzY3MzMzNDQuMTI3MjE1LCJuYmYiOjE2NzY3MzMzNDQuMTI3MjIsImV4cCI6MTcwODI2OTM0NC4xMjMzMTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.L26FGuELoV8KpMbnaYuf7xwsb4icquJ8KDj369PcjJKf-BmA75E-9q6i6LAihRGFE3HD3tyq3Y_AK9R1fipQIacKQcS6sWvmEcjrDtQ1F_Td1JoiAnwdgvnkg1tnBJQd57slVoE8QcgR095MXV-6QzrKuT4GfoiAkYD-dxYhWf29eJnn86DGunHrDhtN8e_dQ9cXfJNEfuz48qPcuejpjvhYK3lWhES9_PT8S8eFH5U4NO4FsSIZnSVmN3uO1Oh4QQjxH7_-2Avy0GXv_boQim38QLw7rXGxJH6CH5ZlQZKRFV0yfMCiDohuQCdoU1ZAtMa49lVEuVnUOft4Rv0UOnmO5kJa-5JI5T_sWYcqJYX6uU65jHxhsSBDJ2MOI73mALcuuKjWdwNjA7B7oylLzQhOPCom3oNOL_ekkVgVBxOKNqFfNXlZ2A-ai0x7vQL9E_uxbrxEdI0JzRmCO8epStLVFelgkWTLgGGqN2Q3dPFMnvyOts7qdISg-N9ChwTvuL7z4tDcMrjroK8HentWKr9W2FPuwcPdMJd7CipmtO0wFEU77DXYNAE88IzUiWz8gLeTuEyw-YMIFyYDzgz0AMN5spO2qHuyHHnhrgUbk8ILH-Mu8WT_rM_34IRASrnNGMtbLy_SqKrmVnBbOcDPHhW4LKZ0UREmCyw_72xzfp0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/booked_appointments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"booked_appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
